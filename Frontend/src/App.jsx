@@ -20,7 +20,7 @@ function App() {
 
   async function reviewCode() {
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+      const response = await axios.post('https://ai-code-reviewer-1-tpna.onrender.com/', { code });
       setReview(response.data);
     } catch (err) {
       setReview("⚠️ Error fetching review. Check console.");
